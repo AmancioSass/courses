@@ -4,11 +4,17 @@ defmodule HelloModule do
 
     alias Module.Math, as: ZMath
 
+    require Integer
+
     def hello do
         inspect(ZMath.sum(3, 5))
     end
 
-    def inspect(param) do 
+    def even(number) do 
+        IO.puts("#{number} is #{Integer.is_even(number)}")
+    end
+
+    defp inspect(param) do 
         puts("Start")
         puts(param)
         puts("End")
